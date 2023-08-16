@@ -121,9 +121,17 @@ void render() {
     // Clear the buffer
     framebuffer.clear();
 
-    point(Vertex2{150, 200});
+    // Polygon 3
+    std::vector<Vertex2> polygon3 = {
+        Vertex2(377, 249), 
+        Vertex2(411, 197), 
+        Vertex2(436, 249)
+    };
 
-    line(Vertex2{200, 200}, Vertex2{500, 500});
+    setCurrentColor(WHITE);
+
+    drawPolygon(polygon3);
+    fillPolygon(polygon3, RED);
 
     // Render the buffer
     renderBuffer();
