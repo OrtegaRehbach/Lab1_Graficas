@@ -134,11 +134,22 @@ void render() {
         Vertex2(205, 410), 
         Vertex2(193, 383)
     };
+    
+    // Polygon 2
+    std::vector<Vertex2> polygon2 = {
+        Vertex2(321, 335), 
+        Vertex2(288, 286), 
+        Vertex2(339, 251), 
+        Vertex2(374, 302)
+    };
 
     setCurrentColor(WHITE);
 
     drawPolygon(polygon1);
     fillPolygon(polygon1, YELLOW);
+    
+    drawPolygon(polygon2);
+    fillPolygon(polygon2, BLUE);
 
     // Render the buffer
     renderBuffer();
