@@ -121,9 +121,28 @@ void render() {
     // Clear the buffer
     framebuffer.clear();
 
-    point(Vertex2{150, 200});
+    // Polygon 4
+    std::vector<Vertex2> polygon4 = {
+        Vertex2(413, 177), Vertex2(448, 159), Vertex2(502, 88), Vertex2(553, 53), Vertex2(535, 36), Vertex2(676, 37), Vertex2(660, 52),
+        Vertex2(750, 145), Vertex2(761, 179), Vertex2(672, 192), Vertex2(659, 214), Vertex2(615, 214), Vertex2(632, 230), Vertex2(580, 230),
+        Vertex2(597, 215), Vertex2(552, 214), Vertex2(517, 144), Vertex2(466, 180)
+    };
 
-    line(Vertex2{200, 200}, Vertex2{500, 500});
+    // Polygon 5
+    std::vector<Vertex2> polygon5 = {
+        Vertex2(682, 175),
+        Vertex2(708, 120),
+        Vertex2(735, 148),
+        Vertex2(739, 170)
+    };
+
+    setCurrentColor(WHITE);
+
+    drawPolygon(polygon4);
+    fillPolygon(polygon4, GREEN);
+    
+    drawPolygon(polygon5);
+    fillPolygon(polygon5, BLACK);
 
     // Render the buffer
     renderBuffer();
