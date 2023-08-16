@@ -142,6 +142,13 @@ void render() {
         Vertex2(339, 251), 
         Vertex2(374, 302)
     };
+    
+    // Polygon 3
+    std::vector<Vertex2> polygon3 = {
+        Vertex2(377, 249), 
+        Vertex2(411, 197), 
+        Vertex2(436, 249)
+    };
 
     setCurrentColor(WHITE);
 
@@ -150,6 +157,9 @@ void render() {
     
     drawPolygon(polygon2);
     fillPolygon(polygon2, BLUE);
+    
+    drawPolygon(polygon3);
+    fillPolygon(polygon3, RED);
 
     // Render the buffer
     renderBuffer();
